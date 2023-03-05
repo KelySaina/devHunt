@@ -10,12 +10,19 @@ var app = new Vue({
         cp: false,
         nf: false,
         notifs: [],
+        posts: [],
+        coms: [],
+        iP:'',
+        comment:'',
+        like:'' ,
+        dislike: '',
     },
     mounted: function(){
         this.getInfo(m)
         this.getNotifs(m)
-        //this.getPosts()
+        this.getPosts(m)
     },
+
     methods:{
         getInfo(matricule){
             var d = {ml : matricule};
@@ -46,16 +53,87 @@ var app = new Vue({
         getNotifs(matricule){
             var d = {ml : matricule};
             var f = this.toFormData(d);
-            axios.post('http://localhost:1060/PHP_API/userAction.php?action=getNotifs')
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=getNotifs',f)
             .then(function(response){
                 //console.log(response);
             })
         },
-        getPosts(){
-            axios.get('http://localhost:1060/PHP_API/get_posts.php')
-            .then(response => {
-                console.log(response.data);
+        getPosts(matricule){
+            var d ={m : matricule}
+            var f = this.toFormData(d)
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=getPosts',f)
+            .then(function(response){
+                //console.log(response.data);
                 // Use the response data to display the posts on your web page
+                app.posts =  response.data;
+                app.getComs(response.data['idpost']);
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error if the request fails
+            });
+            
+        },
+        likeP(idPost){
+            var d ={
+                idP : idPost,
+            }
+            var f = this.toFormData(d)
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=like',f)
+            .then(function(response){
+                app.like = response.data['like']
+
+                // Use the response data to display the posts on your web page
+                //app.coms =  response.data;
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error if the request fails
+            });
+        },
+        dislikeP(idPost){
+            
+            var d ={
+                idP : idPost,
+            }
+            var f = this.toFormData(d)
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=dislike',f)
+            .then(function(response){
+                app.dislike = response.data['dislike']
+                // Use the response data to display the posts on your web page
+                //app.coms =  response.data;
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error if the request fails
+            });
+        },
+        getComs(idPost){
+            var d ={idP : idPost}
+            var f = this.toFormData(d)
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=getComs',f)
+            .then(function(response){
+                //console.log(response.data);
+                // Use the response data to display the posts on your web page
+                app.coms =  response.data;
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error if the request fails
+            });
+        },
+        postCom(idpost){
+            var d ={
+                idP : idpost,
+                content : app.comment,
+                matricule : m,
+            }
+            var f = this.toFormData(d)
+            axios.post('http://localhost:1060/PHP_API/userAction.php?action=postCom',f)
+            .then(function(response){
+                //console.log(response.data);
+                // Use the response data to display the posts on your web page
+                //app.coms =  response.data;
             })
             .catch(error => {
                 console.error(error);

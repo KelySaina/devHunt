@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0 ;
+  background: #138b61;
+}
+
+.linkb a{
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+}
+
+.linkb a:hover{
+  font-size: 20px;
+}
+
+.btn{
+  position:fixed;
+  right: 0;
+  padding: 0.4rem;
+  width: 4rem;
+  background:#000 ;
+  color: goldenrod;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  height: 90vh;/*vertical height*/
+}
+
+.main-editor{
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+ /* box-shadow: 0 2px 3px black;*/
+  position: fixed;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+ /* border: 7px solid #008000 ;*/
+}
+ 
+/*for making coding div full height at right side and creating a new div for showing de result*/
+.first{
+  background-color: #2e333c;
+  width: 50%;
+  overflow-x:hidden;
+  overflow-y: auto;
+  white-space: pre;
+  /*box-shadow: 0 1px white;*/
+  outline: none;
+  padding: 0.6rem;
+  height: 90vh;
+  color: white;
+}
+ 
+/*to make our div result div at same height of our left container*/
+.second{
+  background-color: white;
+  width:50%;
+  overflow-y: auto;
+  white-space: pre;
+  right: 0;
+ /* box-shadow: 0 1px 1px white;*/
+  padding: 0.4rem;
+  height: 90vh;
+}

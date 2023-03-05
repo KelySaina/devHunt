@@ -38,20 +38,21 @@
     $content = "$nom,$prenom,$classe,$hash";
 
     // Insert the registration data into the requests table
-    $sql = "INSERT INTO Requests (idreq, matricule, content,req_type) VALUES ('$idreq', '$matricule','$content',$type)";
+    //$sql = "INSERT INTO Requests (idreq, matricule, content,req_type) VALUES ('$idreq', '$matricule','$content',$type)";
+    $sql = "INSERT INTO UserLog (matricule, nom, prenom, classe, password) VALUES ('$matricule', '$nom', '$prenom', '$classe', '$hash')";
 
     if ($conn->query($sql) === TRUE) {
     // Registration successful, send a success response
     $response = array(
         "status" => "success",
-        "message" => "Request for registration accepted! Wait untill the admin approve your request"
+        "message" => "Registration Complete!"
     );
     echo json_encode($response);
     } else {
     // Registration failed, send an error response
     $response = array(
         "status" => "error",
-        "message" => "Request for registration failed: " . $conn->error
+        "message" => "Registration failed: " . $conn->error
     );
     echo json_encode($response);
     }

@@ -14,7 +14,7 @@ function isEmpty(v){
 }
 
 function post(){
-  if(isEmpty(document.getElementById("title").value) || isEmpty(myCodeMirror.getValue()) || isEmpty(document.getElementById("content").value) || isEmpty(document.getElementById("tags").value)){
+  if(isEmpty(document.getElementById("title").value) || isEmpty(document.getElementById("content").value) || isEmpty(document.getElementById("tags").value)){
     alert('Invalid input');
   }else{
         // Retrieve blog data from form

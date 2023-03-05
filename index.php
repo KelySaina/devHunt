@@ -39,15 +39,18 @@
                 <a id="chat" href="./HTML/post.php"><button>Ask a question</button></a>
                 <a id="chat" href="./CHAT/users.php"><button>Join chat</button></a>
                 <button onclick="nf = true">Notifications</button>
+                <a id="chat" href="./SIM/index.html"><button>Code Simulator</button></a>
             </div>
-            
-            <div class="get_notifs" v-if="nf">
-                <p v-for="notif in notifs">
-                    
-                </p>
-                <p>k</p>
+            <div id="afficherPost"v-for="post in posts">
+                    <p>
+                        <span>{{post.matricule}}</span> {{post.nom}} {{post.prenom}}<br>
+                        {{post.title}}: {{post.content}}<br>
+                        {{post.tags}}
+                    </p>
+                    <p><a href="" @click="likeP(post.idpost)">Like</a> ({{post.likes}})<br><a href=""@click="dislikeP(post.idpost)">Dislike</a>({{post.dislikes}})</p>
+
             </div>
-        </div>
+        </div>  
         <div id="coteDroite">
             <div id="recherche">
                 <input type="text" placeholder="Search...">
@@ -71,7 +74,7 @@
                 <p class="enteteIT">Interesting things</p>
                 <div id="resumePost">
                     <p class="etiquette">Language C</p>
-                    <p class="aproposEtiquete">blablablabla</p>
+                    <p class="aproposEtiquete">High-level programming language</p>
                 </div>
                 <div class="voisPlus">
                     <a href="#">Show more...</a>
@@ -90,6 +93,7 @@
         });
         myCodeMirror.setSize(null, "198px");
 	</script>
+    <script src="./JS/post_q.js"></script>
     
 </body>
 <?php

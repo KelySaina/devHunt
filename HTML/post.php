@@ -71,7 +71,7 @@
                     
                     <div>
                         <label id="la">Post Description <span id="ii">*</span></label><br>
-                        <textarea id = "content"style="width: 100%;height: 100px;resize: none;" required></textarea>
+                        <textarea id = "content" style="width: 100%;height: 100px;resize: none;" required></textarea>
                     </div>
                     
                     

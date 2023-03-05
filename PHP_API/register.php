@@ -29,7 +29,7 @@
     $password = mysqli_real_escape_string($conn, $password);
 
     // Hash the password using the bcrypt algorithm
-    $hash = password_hash($password, PASSWORD_BCRYPT);
+    //$hash = password_hash($password, PASSWORD_BCRYPT);
 
     // Generate a random IdReq number between 0 and 10000000
     $idreq = rand(0, 10000000);
@@ -39,7 +39,7 @@
 
     // Insert the registration data into the requests table
     //$sql = "INSERT INTO Requests (idreq, matricule, content,req_type) VALUES ('$idreq', '$matricule','$content',$type)";
-    $sql = "INSERT INTO UserLog (matricule, nom, prenom, classe, password) VALUES ('$matricule', '$nom', '$prenom', '$classe', '$hash')";
+    $sql = "INSERT INTO UserLog (matricule, nom, prenom, classe, password) VALUES ('$matricule', '$nom', '$prenom', '$classe', '$password')";
 
     if ($conn->query($sql) === TRUE) {
     // Registration successful, send a success response

@@ -53,7 +53,16 @@
         </div>  
         <div id="coteDroite">
             <div id="recherche">
-                <input type="text" placeholder="Search...">
+                <form action="" method="POST">
+                    <button name="lo" style=" width: 100%; height: 50px; border: none; background: #333;color: white;border-radius: 25px;">Log Out</button>
+                </form>
+                
+                <?php
+                    if(isset($_POST['lo'])){
+                        session_destroy();
+                        header('Location:http://localhost:1060');
+                    }
+                ?>
             </div>
             <div id="propMentor">
                 <p>Mentor proposition</p>

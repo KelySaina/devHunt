@@ -1,0 +1,185 @@
+body
+{
+    height: 100vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-y: hidden;
+}
+#loginContent
+{
+    width: 800px;
+    height: 670px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+.interLog
+{
+    width: auto;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#imgLog
+{
+    float: left;
+    width: 49%;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 450px;
+}
+#imgLog img
+{
+    margin: auto;
+    padding: auto;
+}
+#formLog
+{
+    text-align: center;
+    float: right;
+    width: 49%;
+    height: 450px;
+}
+#formLog p
+{
+    font-weight: 100px;
+    font-size: 25px;
+
+}
+#formLog .name, #formLog .pass{
+    display: flex;
+    justify-content: space-between;
+}
+#formLog .name input, #formLog .pass input{
+    width: 49%;
+}
+#formLog input::placeholder{
+    color: gray;
+}
+#formLog input
+{
+    width: 100%;
+    margin:  5px 0 5px 0;
+    font-size: 17px;
+    border: none;
+    border-bottom: 2px solid #138b61;
+    padding: 10px 10px 2px 10px;
+    color: black;
+    font-weight: 700;
+}
+
+#formLog input:focus{
+    outline: none;
+}
+#formLog .info select:focus{
+    outline: none;
+}
+#formLog .info select
+{
+    margin-top: 2px;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    background: none;
+    border-bottom: 2px solid #138b61;
+    color: gray;
+    font-weight: 700;
+}
+#llog:hover{
+    color: #138b61;
+    font-size: 20px;
+}
+.text
+{
+    margin-top: 50px;
+    color: gray;
+    font-size: 5px;
+}
+.submit
+{
+    background-color: #138b61;
+    color: white;
+    cursor: pointer;
+}
+.text ::placeholder
+{
+    margin-left: 500px;
+    font-size: 5px;
+}
+.forgotPwd
+{
+    margin-top: 50px;
+}
+.createAccount
+{
+    width: 100%;
+    text-align: center;
+}
+a
+{
+    color: gray;
+    font-weight: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    body
+    {
+        height: 175vh;
+    }
+    #loginContent
+    {
+        width: 450px;
+        height: 160vh;
+        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10x;
+        padding-right: 10px;
+    }
+    #imgLog img
+    {
+        height: 100px;
+        width: 100px;
+    }
+    #imgLog
+    {
+        float: none;
+        width: 100%;
+        padding-top: 00px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    #formLog
+    {
+        float: none;
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+      body
+      {
+          height: 100vh;
+      }
+      #loginContent
+      {
+          width: 100%;
+          margin-top: -5px;
+          margin-left: -10px;
+          padding: 10px;
+          padding-top: 10px;
+          padding-bottom: 10x;
+          padding-right: 10px;
+          
+      }
+      #formLog input,#formLog select
+      {
+        width: 100%;
+        font-size: 14px;
+      }
+    }

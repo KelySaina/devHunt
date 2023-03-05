@@ -1,0 +1,163 @@
+body
+{
+    overflow-y: hidden;
+    height: 100vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #138b61;
+}
+#loginContent
+{
+    width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+.interLog
+{
+    width: auto;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#imgLog
+{
+    float: left;
+    width: 49%;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 450px;
+}
+#imgLog img
+{
+    margin: auto;
+    padding: auto;
+}
+#formLog
+{
+    text-align: center;
+    float: right;
+    width: 49%;
+    height: 450px;
+}
+#formLog p
+{
+    font-weight: 100px;
+    font-size: 25px;
+
+}
+#formLog input
+{
+    margin : 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 50px;
+    font-size: 17px;
+    border: none;
+    padding: 10px;
+    padding-left: 30px;
+
+}
+input::placeholder{
+    font-weight: lighter;
+    color: gray;
+}
+.text
+{
+    margin-top: 50px;
+    color: black;
+    font-weight: 600;
+    font-size: 5px;
+    background-color: rgb(221, 221, 221);
+}
+.submit
+{
+    background-color: #138b61;
+    color: white;
+    cursor: pointer;
+}
+.text ::placeholder
+{
+    margin-left: 500px;
+    font-size: 5px;
+}
+.forgotPwd
+{
+    margin-top: 50px;
+}
+.createAccount
+{
+    width: 100%;
+    text-align: center;
+}
+a
+{
+    color: gray;
+    font-weight: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    body
+    {
+        height: 175vh;
+    }
+    #loginContent
+    {
+        width: 450px;
+        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10x;
+        padding-right: 10px;
+    }
+    #imgLog img
+    {
+        height: 100px;
+        width: 100px;
+    }
+    #imgLog
+    {
+        float: none;
+        width: 100%;
+        padding-top: 00px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    #formLog
+    {
+        float: none;
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+      body
+      {
+          height: 100vh;
+      }
+      #loginContent
+      {
+          width: 100%;
+          margin-top: -5px;
+          margin-left: -10px;
+          padding: 10px;
+          padding-top: 10px;
+          padding-bottom: 10x;
+          padding-right: 10px;
+      }
+      #formLog input
+      {
+        width: 75%;
+      }
+    }

@@ -1,0 +1,305 @@
+
+.settingProfil .setting-btn, .settingProfil .setting-btn img{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#coteGauche
+{
+    float: left;
+    width: 65%;
+}
+
+.PDC
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #138b61;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.PDP
+{
+    border: 3px solid #138b61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-top: -70px;
+    margin-left: 5px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: 1000;
+    color: #138b61;
+    background: white;
+}
+#aboutU{
+    display:flex; 
+    justify-content: center;
+    float: right;
+    width: 70%; 
+    text-align: center;
+    margin: -50px 0 50px 0 ;
+}
+.aproposUser
+{
+    width: 70%;
+    margin: auto;
+}
+.aproposUser p{
+    font-size: large;
+    font-weight: bolder;
+}
+#coteDroite
+{
+    float: right;
+    width: 30%;
+}
+.settingProfil
+{
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+.settingProfil input
+{
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: rgb(39, 119, 73);
+    height: 30px;
+    cursor: pointer;
+}
+.navigation, .avisNav
+{
+    width: 100%;
+    display: flex;
+}
+.navigation button, .avisNav button, #chat
+{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: rgb(10, 8, 8);
+    font-weight: bolder;
+    height: 50px;
+    margin:auto;
+    width: 100%;
+    cursor: pointer;
+}
+.navigation button:hover
+{
+    border-bottom:  2px solid green;
+    color: green;
+}
+#Posts
+{
+    display: fixed;
+    height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: none;
+}
+#TampletPost
+{
+    width: 100%;
+}
+.profilPub {
+    margin: 20px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;background-color: rgb(113, 161, 193);
+    
+}
+.publication
+{
+    float: right;
+    width: 80%;
+}
+
+.publication .pseudo
+{
+    font-weight: bold;
+}
+.Legend
+{
+    color: rgb(92, 92, 92);
+    font-weight: 200;
+}
+.imagePublier
+{
+    margin: 10px;
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.avisNav button
+{
+    color: black;
+    font-weight: 100;
+}
+
+.avisNav img{
+    height: 25px;
+    width: 25px;
+}
+
+#recherche input
+{
+    width: 80%;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(213, 213, 213);
+}
+
+#propMentor
+{
+    width: 90%;
+    height: 200px;
+    overflow-y: auto;
+    background-color: rgb(245, 251, 251);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#propMentor p , #interestingThings .enteteIT{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.FollowMentor button
+{
+    border-radius: 40px;
+    padding: 3px;
+    width: 75px;
+    background-color: transparent;
+    border-color: rgb(39, 119, 73);
+    cursor: pointer;
+}
+#mentorDiv
+{
+    width: 100%;
+    display: flex;
+}
+.profilMentor
+{
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.aproposMentor
+{
+    width: 60%;
+}
+.nomMentor
+{
+    float: left;
+    width: 60%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.FollowMentor
+{
+    float: right;
+    margin-right: -20px;
+    margin-top: 20px;
+}
+
+.voisPlus a
+{
+    color: rgb(82, 96, 91);
+}
+
+#interestingThings 
+{
+    width: 90%;
+    height: 340px;
+    overflow-y: auto;
+    background-color: rgb(245, 251, 251);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#resumePost, .aproposEtiquete, .etiquette
+{
+    width: 100%;
+}
+.etiquette
+{
+    font-size: 13px;
+}
+
+@media screen and (max-width: 700px) {
+    #coteGauche
+    {
+        float: none;
+        width: 100%;
+    }
+    #coteDroite
+    {
+        float: none;
+        width: 100%;
+    }
+    .settingProfil input
+    {
+        width: 100px;
+    }
+    .PDC{
+        height: 100px;
+        font-size: 20px;
+    }
+    .PDP{
+        width: 75px;
+        height: 75px;
+        font-size: 18px;
+        margin-top: -50px;
+    }
+    #Posts
+    {
+        display: none;
+    }
+    #recherche input
+    {
+        margin-left: 20px;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .aproposUser{
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+    
+    #propMentor,
+    #interestingThings
+    {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .nomMentor
+    {
+        margin-top: 10px;
+       width: 80%;
+    }
+    #aboutU{
+        margin: -20px 0 20px 0;
+    }
+}

@@ -1,0 +1,54 @@
+body{
+    font-size: 20px;
+}
+#ii {
+    color:crimson;
+}
+
+a{
+    text-decoration: none;
+}
+.container{ 
+    border: 2px solid #a5a397;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+
+}
+input
+{
+    padding: 5px;
+    font-size: 20px;
+}
+#la,#ti {
+    margin-bottom: 20px;
+}
+
+#ti{
+   
+    width:95% ;
+}
+.cat{
+    width: 100%;
+}
+
+h3{
+    background-color: green;
+    margin: -20px;
+    margin-bottom: 5px;
+    height: 45px;
+    padding-left: 175px;
+    padding-top: 20px;
+    color: white;
+}   
+
+.desc{
+    height: 150px;
+}
+.post
+{
+    float: right;
+    width: 100px;
+}

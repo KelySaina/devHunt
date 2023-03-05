@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/reg.css">
+</head>
+<body>
+    <div id="loginContent">
+        <div class="interLog">
+            <div id="imgLog">
+                <img src="../assets/icon.png" alt="Login">
+            </div>
+            <div id="formLog">
+                <p style="color:#138b61"> <b>REGISTRATION FORM</b> </p>
+                <form action="">
+                    <div class="name">
+                        <input type="text" placeholder="*First Name" id="nom" class="text" required oninput="isEmpty(this.value);">
+                        <input type="text" placeholder="*Last Name" id="prenom" class="text" required> 
+                    </div>
+                    <div class="info">
+                        <input type="text" placeholder="*Matricule" id="matricule" class="text" required>
+                        <div class="pass">
+                            <input type="password" placeholder="*Password" id="password" class="text" required>
+                            <input type="password" placeholder="*Confirm Password" id="confpassword" class="text" required> 
+                        </div>
+                        <select name="" id="classe" class="text" required>
+                            <option value="" disabled selected>*Grade</option>
+                            <option value="L1">L1</option>
+                            <option value="L2">L2</option>
+                            <option value="L3">L3</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="REGISTER" class="submit" style="color: white;" onclick="register();">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Already have account? <a id="llog" href="./login.html" class="text-dark" style="text-decoration:none;"> Login now &#8594</a>
+                        </div>
+                    </div>
+                    <br><br>
+                    <p style="float:right; font-size: 10px;">Inputs with a '*' are required</p>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="../JS/register.js"></script>
+    <script src="../JS/axios.min.js"></script>
+</body>
+</html>
